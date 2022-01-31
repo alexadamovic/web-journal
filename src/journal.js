@@ -31,3 +31,17 @@ JournalEntry.prototype.vowelCounter = function () {
   let countArray = [vowelCount, consCount];
   return countArray;
 };
+
+JournalEntry.prototype.teaser = function() {
+  let words = this.body.split(" ");
+  let teaser = [];
+  for (let i = 0; i <= 8; i++) {
+    if (words[i].includes(".")) {
+      teaser.push(words[i]);
+      return teaser.join(" ");
+    } else {
+      teaser.push(words[i]);
+    }
+  }
+  return teaser.join(" ");
+}
