@@ -13,7 +13,10 @@ $(document).ready(function() {
     let userTitle = $("#title").val();
     let userBody = $("#body").val();
     let newJournalEntry = new JournalEntry(userTitle, userBody);
-    $("#output").html(newJournalEntry.body);
+    let vowelCount = newJournalEntry.vowelCounter();
+    $("#output").html(newJournalEntry.teaser());
     $("#word-count").html(newJournalEntry.wordCounter());
+    $("#vowel").html(vowelCount[0]);
+    $("#consonant").html(vowelCount[1]);
   });
 });

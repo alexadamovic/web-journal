@@ -35,7 +35,7 @@ JournalEntry.prototype.vowelCounter = function () {
 JournalEntry.prototype.teaser = function() {
   let words = this.body.split(" ");
   let teaser = [];
-  for (let i = 0; i <= 8; i++) {
+  for (let i = 0; i < 8; i++) {
     if (words[i].includes(".")) {
       teaser.push(words[i]);
       return teaser.join(" ");
@@ -44,4 +44,4 @@ JournalEntry.prototype.teaser = function() {
     }
   }
   return teaser.join(" ");
-}
+};
